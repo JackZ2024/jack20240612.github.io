@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="了解 YouTube 上传助手访问的数据、Google 授权权限、本地保存方式，以及撤销授权与删除数据的方法。">
+  <meta name="robots" content="noindex">
+  <title>隐私政策 — YouTube 上传助手</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <!-- 发布前：补齐运营者与联系方式，确认全部处理方式与实际版本一致，再更新生效日期。 -->
+  <div class="draft">隐私政策草稿 · 发布信息尚待补齐，本稿尚未正式生效。</div>
+  <div class="wrap">
+    <header class="nav"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">↑</span>YouTube 上传助手</a><nav class="nav-links" aria-label="主导航"><a href="index.html">软件首页</a><a href="index.html#contact">联系我们</a></nav></header>
+    <main id="main">
+      <header class="policy-header"><span class="eyebrow">Privacy / 隐私与数据</span><h1>隐私政策</h1><p>这份说明解释基础版桌面软件会访问哪些信息、为什么需要这些信息，以及你如何管理授权和本地记录。</p><div class="policy-meta"><span>草稿更新：2026 年 10 月 13 日</span><span>生效日期：<strong class="placeholder">【待填写：生效日期】</strong></span><span>适用版本：基础版 1.0</span></div></header>
+      <div class="policy-layout">
+        <nav class="toc" aria-label="隐私政策目录"><strong>本页内容</strong><a href="#scope">01 · 适用范围</a><a href="#data">02 · 访问与使用的数据</a><a href="#permissions">03 · Google 授权权限</a><a href="#storage">04 · 本地保存与保留</a><a href="#sharing">05 · 数据传输与分享</a><a href="#control">06 · 撤销授权与删除</a><a href="#website">07 · 网站与联系信息</a><a href="#children">08 · 儿童与上传内容</a><a href="#changes">09 · 政策变更</a><a href="#contact">10 · 联系我们</a></nav>
+        <article class="policy-body">
+          <section id="scope"><h2>01 · 适用范围与运营者</h2><p>本政策适用于由 <strong class="placeholder">【待填写：开发者名称】</strong> 提供的“YouTube 上传助手”基础版 1.0 Windows 桌面软件，以及介绍该软件的本网站。</p><p>本软件使用 YouTube API Services，是独立开发的上传工具，非 Google 或 YouTube 官方产品。Google 和 YouTube 对其服务中的数据处理适用 <a href="https://policies.google.com/privacy">Google 隐私政策</a>；使用 YouTube 服务还应遵守 <a href="https://www.youtube.com/t/terms">YouTube 服务条款</a>。</p><div class="notice">当前版本没有开发者运营的视频上传服务器。视频通过你电脑上的软件发送到 YouTube。本政策描述的是当前版本的实际行为。</div></section>
+          <section id="data"><h2>02 · 我们访问和使用哪些数据</h2><div class="table-scroll"><table><thead><tr><th scope="col">数据类型</th><th scope="col">用途与处理方式</th></tr></thead><tbody>
+            <tr><td>所选视频文件</td><td>软件只读取你指定的文件，用于上传到你授权的 YouTube 频道。不会扫描整个视频目录，也不会另行制作视频副本。</td></tr>
+            <tr><td>视频信息</td><td>你填写的标题、简介、标签、可见性、儿童受众声明以及固定的视频分类设置，会随上传请求发送给 YouTube。</td></tr>
+            <tr><td>频道基本信息</td><td>Google 授权后，软件读取目标频道的基本信息，并在窗口中显示频道名称，帮助你确认上传目标；不保存频道名称到本地记录。</td></tr>
+            <tr><td>OAuth 授权令牌</td><td>用于证明你已授权软件访问相应 API，并在需要时更新访问令牌。软件不读取或保存你的 Google 账号密码。</td></tr>
+            <tr><td>本地设置与上传结果</td><td>保存 OAuth JSON 文件路径及最近一次上传的记录，便于恢复设置、显示视频链接和提醒可能的重复上传。</td></tr>
+          </tbody></table></div><p>软件只有在你点击“开始上传”后才提交上传任务。打开软件时，若存在有效授权，会自动恢复授权并读取频道信息，不会自动上传视频。</p></section>
+          <section id="permissions"><h2>03 · Google 授权权限及使用边界</h2><ul><li><code>https://www.googleapis.com/auth/youtube.upload</code>：用于上传你选择的视频及其相关信息。</li><li><code>https://www.googleapis.com/auth/youtube.readonly</code>：该权限的授权范围允许读取 YouTube 账号信息；当前软件实现只调用频道查询，用于确认目标频道，不读取播放历史、订阅列表或其他视频列表。</li></ul><p>授权通过 Google 的浏览器页面完成。你可以拒绝或撤销授权；这会使依赖授权的视频上传和频道确认功能无法使用。</p><p>本软件对通过 Google API 获得的信息的使用和向其他应用的转移，将遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包括其 Limited Use（有限使用）要求。当前版本不将 Google 用户数据用于广告、出售、用户画像或训练人工智能模型。</p></section>
+          <section id="storage"><h2>04 · 数据保存、安全与保留时间</h2><p>本地数据位于 Windows 当前用户目录中的 <code>%LOCALAPPDATA%\YouTubeUploadManager\</code>：</p><ul><li><code>token.dpapi</code>：OAuth 访问令牌、刷新令牌及相关授权配置。使用 Windows DPAPI 加密，绑定当前 Windows 用户；重新授权或刷新令牌时会更新。</li><li><code>settings.json</code>：用户选择的 OAuth 凭据文件路径。以普通 JSON 文件保存，直到被更新或由你删除。</li><li><code>last_upload.json</code>：最近一次上传的文件路径、视频标题、简介、标签、可见性、儿童受众声明、任务状态、视频 ID 和错误或结果信息。以普通 JSON 文件保存，每次开始新上传会覆盖之前的记录。</li></ul><p>最近一次上传记录也可能包含上传失败时的 API 错误说明。软件不自动定期清除这些文件；你可按下一节的方法随时删除。不建议在简介或标签中填写不希望其他电脑使用者看到的敏感信息。</p><p>你选择的 OAuth JSON 凭据原文件仍保留在原位置，软件不将其复制到开发者服务器。加密不能防止同一 Windows 账号下的恶意程序访问数据，也不替代电脑本身的安全防护。卸载或删除软件程序文件，不会自动删除上述用户数据目录。</p><p>上传到 YouTube 的视频及其相关信息由 Google 和 YouTube 按其政策处理、存储和保留。删除本地记录不影响 YouTube 上的视频。</p></section>
+          <section id="sharing"><h2>05 · 数据传输与第三方分享</h2><p>授权和上传过程中，软件通过 HTTPS 与 Google OAuth 服务和 YouTube API 通信，发送必要的授权信息、视频文件及视频信息，并接收频道信息、上传状态和视频 ID。</p><p>当前桌面软件没有向开发者回传视频、授权令牌、频道信息或上传记录的功能，也没有广告 SDK、行为分析或自动崩溃报告。软件不向其他第三方出售或分享 Google 用户数据。</p><p>视频上传后的观看范围取决于你选择的可见性和 YouTube 实际应用的设置：公开视频可供公众观看；非公开视频可通过链接访问；私享视频按 YouTube 的访问规则限制观看。点击“复制链接”会将链接放入系统剪贴板；点击“打开视频”会由默认浏览器访问 YouTube。浏览器、操作系统及其同步设置可能影响剪贴板和浏览记录的处理。</p></section>
+          <section id="control"><h2>06 · 如何撤销授权和删除数据</h2><ol><li><strong>撤销 Google 授权：</strong>打开 <a href="https://myaccount.google.com/permissions">Google 账号的第三方应用权限页面</a>，找到对应 OAuth 应用名称并移除访问权限。应用名称以 Google 授权页面显示的名称为准；当前版使用用户配置的 OAuth 项目。</li><li><strong>删除本地授权：</strong>关闭软件，在资源管理器中输入 <code>%LOCALAPPDATA%\YouTubeUploadManager\</code>，删除 <code>token.dpapi</code>。仅删除本地令牌不会同时撤销 Google 服务器上的授权。</li><li><strong>删除本地记录和设置：</strong>删除 <code>last_upload.json</code> 和 <code>settings.json</code>；也可以删除整个 <code>YouTubeUploadManager</code> 用户数据目录。OAuth JSON 原文件需要在你保存它的位置另行删除。</li><li><strong>删除上传的视频：</strong>前往 <a href="https://studio.youtube.com/">YouTube Studio</a> 管理或删除视频。撤销授权、停止上传或删除本地文件，不会自动删除已经上传的视频。</li></ol><p>删除本地数据后，下次使用软件需要重新配置或授权。如曾把数据放入备份或云同步目录，请同时检查相应备份。开发者不能远程删除你电脑上的文件；如需操作帮助，可使用本政策列明的邮箱联系。</p></section>
+          <section id="website"><h2>07 · 网站访问与主动联系</h2><p>本网站为静态介绍页面，不提供账号登录、在线上传或表单，不设置 Cookie、不使用浏览器本地存储，也未加入第三方统计、广告、外部字体或视频嵌入。访问外部链接后，第三方网站的数据处理由其自身政策决定。</p><p>网站托管服务商可能为了提供页面和保障安全而处理 IP 地址、访问时间、浏览器信息及请求记录。实际托管服务商及其隐私政策为：<strong class="placeholder">【待填写：托管服务商名称与隐私政策网址】</strong>。</p><p>如果你通过邮件主动联系开发者，开发者会处理你提供的邮箱和邮件内容，用于回复问题或提供支持。请勿发送密码、授权令牌或 OAuth JSON 文件。如需删除你主动提供的邮件信息，可通过同一邮箱提出请求；邮件服务商的数据处理同时适用其政策。</p></section>
+          <section id="children"><h2>08 · 儿童与上传内容</h2><p>本软件面向管理自己 YouTube 频道、能够合法使用 Google 和 YouTube 服务的用户，不专门面向儿童。上传时填写“是否面向儿童”属于向 YouTube 声明视频受众，并不代表软件面向儿童提供服务。用户应如实填写，并对上传内容及所需权利负责。</p></section>
+          <section id="changes"><h2>09 · 隐私政策变更</h2><p>软件功能或数据处理方式变更时，开发者会更新本页并标明新的生效日期。若未来增加开发者服务器、遥测、更多权限或其他新的数据用途，会在相应功能上线前更新说明，并在需要时重新取得授权。</p></section>
+          <section id="contact"><h2>10 · 联系我们</h2><p>如对隐私、授权或数据删除有问题，请联系：</p><ul><li>开发者 / 运营者：<strong class="placeholder">Jack</strong></li><li>支持与隐私联系邮箱：<a href="mailto:jack20240612@outlook.com">jack20240612@outlook.com</a></li></ul><p>联系时可提供软件版本和问题描述。请遮盖截图或错误说明中的敏感信息。</p></section>
+        </article>
+      </div>
+    </main>
+    <footer><div class="footer-line"><span>YouTube 上传助手 · 基础版 1.0</span><div><a href="index.html">软件首页</a><a href="https://www.youtube.com/t/terms">YouTube 服务条款</a><a href="https://policies.google.com/privacy">Google 隐私政策</a></div></div><p>独立开发的桌面工具，使用 YouTube API Services，非 Google 或 YouTube 官方产品。</p></footer>
+  </div>
+</body>
+</html>
